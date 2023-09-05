@@ -148,6 +148,7 @@ function Product() {
                                                     <th scope='col'>No</th>
                                                     <th scope='col'>Tanggal</th>
                                                     <th scope='col'>Produk</th>
+                                                    <th scope="col">Pembeli</th>
                                                     <th scope='col'>Biaya</th>
                                                     <th scope="col">Bukti Bayar</th>
                                                     <th scope="col">Status</th>
@@ -162,6 +163,7 @@ function Product() {
                                                                 <td className="text-center">{(index + 1)}</td>
                                                                 <td>{formatDate(data?.createdAt)}</td>
                                                                 <td><Button variant="outline-dark" onClick={() => handleShowDetail(data?.pesanandetail)}>Detail</Button></td>
+                                                                <td>{data?.nama}</td>
                                                                 <td>{rupiah(data?.total)}</td>
                                                                 <td style={{ maxWidth: "150px", minWidth: "160px" }}>
                                                                     {

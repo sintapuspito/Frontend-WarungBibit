@@ -152,7 +152,6 @@ const RiwayatPemesanan = () => {
                       <th>Biaya</th>
                       <th>Konfirmasi Pembayaran</th>
                       <th>Status</th>
-                      <th>Role</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
@@ -196,7 +195,6 @@ const RiwayatPemesanan = () => {
                               </Form>
                             </td>
                             <td style={{ width: "200px" }}>{data?.status}</td>
-                            <td style={{ width: "50px" }}>{data?.user?.role}</td>
                             <td>
                               <Button size="sm" variant='outline-danger' onClick={() => handleShowDelete(data?.id)}>Hapus</Button>
                             </td>

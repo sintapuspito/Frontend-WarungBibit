@@ -162,7 +162,8 @@ const Keranjang = () => {
                   </thead>
                   <tbody>
                     {
-                      datas?.map((data, index) => {
+                      cookies.get("token")==""||cookies.get('token')==null? cookies.get("token"): (
+                        datas?.map((data, index) => {
                         return (
                           <tr key={index}>
                             <td className="text-center" style={{ width: "90px", minWidth: "60px" }}>
@@ -190,6 +191,7 @@ const Keranjang = () => {
                           </tr>
                         )
                       })
+                      )
                     }
                   </tbody>
                 </Table>
@@ -205,12 +207,12 @@ const Keranjang = () => {
                       <tbody>
                         <tr>
                           <td>Total Harga</td>
-                          <td>{rupiah(total)}</td>
+                          <td>{cookies.get("token") === "" || cookies.get('token') == null ? 0 : rupiah(total)}</td>
                         </tr>
                       </tbody>
                     </Table>
                     <div className="w-100 d-flex justify-content-end">
-                      <Button disabled={datas?.length == 0} className="mt-2" variant="success" onClick={handleNext}>Lanjutkan Pembayaran</Button>
+                      <Button disabled={datas?.length == 0 || cookies.get("token") === "" || cookies.get('token') == null} className="mt-2" variant="success" onClick={handleNext}>Lanjutkan Pembayaran</Button>
                     </div>
                   </Col>
                 </Row>

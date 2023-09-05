@@ -53,7 +53,7 @@ const Beranda = () => {
       .map((data, index) => (
         <Col key={index} xs="10" sm="6" md="4" lg="4" xl="3" className="d-flex justify-content-center">
           <Card style={{ width: "100%" }}>
-            <Card.Img variant="top" src={data?.gambar} style={{ maxHeight: "10rem", objectFit: "cover" }} />
+            <Card.Img variant="top" src={data?.gambar} style={{ maxHeight: "24rem", objectFit: "cover" }} />
             <Card.Body className="d-flex flex-column align-content-center justify-content-center" style={{ width: "98%" }}>
               <Card.Title className="text-center">{data?.nama}</Card.Title>
               <Card.Title className="h6 text-center mb-4">{rupiah(data?.harga)}</Card.Title>
